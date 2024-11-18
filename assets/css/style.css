@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden; 
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content {
+    padding: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh; 
+    overflow-y: auto; 
+}
+
+ol.pokemons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Layout*/
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+    height: auto;
+    max-height: 100%; 
+    overflow-y: auto; 
+}
+
+/*distribuição */
+ol.pokemons li {
+    background-color: #14a06f;
+    color: #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    min-height: 350px; 
+    max-height: 400px; 
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+    position: relative; 
+}
+
+/*imagem */
+ol.pokemons li img {
+    width: 100px; 
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+/* Nome do Pokémon */
+ol.pokemons li h2 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 10px;  
+}
+
+/* Tipos do Pokémon */
+ol.pokemons li p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+    margin-top: 10px;
+    word-wrap: break-word;
+    margin-bottom: 10px; 
+}
+
+/* Estilo das tags de tipos */
+ol.pokemons li p span {
+    display: inline-block;
+    background-color: #BDBDBD;  
+    color: white;
+    border-radius: 5px;
+    padding: 6px 12px;
+    margin: 3px;
+    font-size: 1rem; 
+    text-transform: capitalize;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Estilo stats */
+.stats {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #fff;
+    text-align: left;
+    width: 100%;
+    padding-left: 10px;
+    margin-bottom: 10px; 
+}
+
+
+.stat {
+    margin-bottom: 8px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*stats */
+.stat strong {
+    color: #FFEB3B;  
+}
+
+.pokemon-id {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: bold;
+}
